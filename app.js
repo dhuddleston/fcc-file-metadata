@@ -1,9 +1,7 @@
 var express = require('express');
 var path = require('path');
-var bodyParser = require('body-parser');
 
 var app = express();
-app.use(bodyParser.json());
 
 var routes = require('./routes/index');
 var api = require('./controllers/api');
@@ -12,10 +10,6 @@ var api = require('./controllers/api');
  require('dotenv').config({
    silent: true
  });
-
-// var mongo = require('mongodb').MongoClient
-// var mongoose = require('mongoose');
-// mongoose.connect(process.env.MONGOLAB_URI);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
